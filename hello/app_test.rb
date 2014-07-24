@@ -11,7 +11,7 @@ describe "Hello application" do
 
   it "says hello" do
     get "/hello"
-    last_response.should be_ok
-    last_response.body.should == "Hello, Sinatra"
+    expect(last_response).to be_ok
+    expect(last_response.body).to eq("Hello, Sinatra")
   end
 end
